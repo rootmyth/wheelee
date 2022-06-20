@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 195 45" style="enable-background:new 0 0 195 45;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#AECFC2;}
+	.st3{fill:#D4CF8B;}
+	.st4{fill:#A1C8DE;}
+	.st5{fill:#8CC63F;}
+	.st6{fill:#007A06;}
+</style>
+<path class="st5" d="M90,30V15H65v25h25v-5H70v-5H90z M70,20h15v5H70V20z"/>
+<path class="st5" d="M120,30V15H95v25h25v-5h-20v-5H120z M100,20h15v5h-15V20z"/>
+<path class="st6" d="M160,30V15h-25v25h25v-5h-20v-5H160z M140,20h15v5h-15V20z"/>
+<path class="st6" d="M190,20V5h-25v25h25v-5h-20v-5H190z M170,10h15v5h-15V10z"/>
+<rect x="125" y="5" class="st5" width="5" height="35"/>
+<polygon class="st5" points="60,40 60,15 40,15 40,5 35,5 35,40 40,40 40,20 55,20 55,40 "/>
+<polygon class="st5" points="30,15 30,40 5,40 5,15 10,15 10,35 15,35 15,15 20,15 20,35 25,35 25,15 "/>
+</svg>
