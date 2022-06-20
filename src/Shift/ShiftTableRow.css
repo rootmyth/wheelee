@@ -1,0 +1,57 @@
+.ShiftTableRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ShiftTableRow__cabNumber {
+    height: 30px;
+    width: 50px;
+    background-color: rgb(228, 228, 188);
+    padding: 10px;
+    margin: 3px;
+    text-align: center;
+}
+
+.ShiftTableRow__driver {
+    height: 30px;
+    min-width: 300px;
+    background-color: rgb(228, 228, 188);
+    padding: 10px;
+    margin: 3px;
+    overflow: hidden;
+}
+
+.ShiftTableRow__am {
+    height: 30px;
+    width: 50px;
+    background-color: rgb(228, 228, 188);
+    padding: 10px;
+    margin: 3px;
+    text-align: center;
+}
+
+.ShiftTableRow__pm {
+    height: 30px;
+    width: 50px;
+    background-color: rgb(228, 228, 188);
+    padding: 10px;
+    margin: 3px;
+    text-align: center;
+}
+
+.unavailableText {
+    color: rgb(118, 0, 0)
+}
+
+.header {
+    background-color: rgb(140, 198, 63);
+}
+
+.unavailableImage {
+    background-image: url("../images/unavailable-12.svg");
+}
+
+.existingShiftImage {
+    background-image: url("../images/existingShift-13.svg");
+}

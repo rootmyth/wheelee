@@ -1,0 +1,32 @@
+.ActiveShift {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: 70%;
+    background-color: rgb(228, 228, 188);
+    padding: 10px 15px;
+    margin: 20px auto;
+}
+
+.ActiveShift__tip__header {
+    width: 100%;
+    background: rgb(140, 198, 63);
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+.ActiveShift__tip__text {
+    margin: 50px 50px 20px 50px;
+}
+
+.ActiveShift__tip__author {
+    margin: 20px auto;
+}
+
+.ActiveShift__btn {
+    margin-top: 50px;
+}

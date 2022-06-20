@@ -1,0 +1,28 @@
+.ShiftForm {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(228, 228, 188);
+    padding: 10px;
+    margin: 3px;
+}
+
+.ShiftForm__element {
+    margin: 20px;
+}
+
+.ShiftForm__name {
+    width: 100%;
+    background: rgb(140, 198, 63);
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+.ShiftForm__shiftSelector__am:focus,
+.ShiftForm__shiftSelector__pm:focus {
+    outline: none
+}
+
