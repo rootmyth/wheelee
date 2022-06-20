@@ -1,0 +1,32 @@
+.Nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    line-height: 0;
+    background-color: rgb(228, 228, 188);
+}
+
+.Nav__home {
+    margin: auto;
+}
+
+.WheeleeHome__image {
+    height: 50px;
+    padding: 5px 10px;
+}
+
+.Nav__icons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.NavIcon {
+    height: 50px;
+    padding: 5px 10px;
+}
+
+.NavIcon:hover {
+    background-color: rgb(0, 43, 71);
+}
