@@ -24,7 +24,7 @@ const Login = () => {
         []
     )
 
-    const submitCredentials = (e) => {
+    const submitCredentials = () => {
         
         const foundUser = users.find(user => user.email === credentials.email && user.password === credentials.password)
         if (foundUser) {
@@ -77,7 +77,7 @@ const Login = () => {
                         />
                     </fieldset>
                 </form>
-                <button className="Login__button" onClick={submitCredentials()}><h1>Log In</h1></button>
+                <button className="Login__button" onClick={() => submitCredentials}><h1>Log In</h1></button>
                 <section className="Login__register">
                     <Link to="/register">Or create a new account</Link>
                 </section>
