@@ -1,0 +1,46 @@
+.ViewSelector {
+    height: 100%;
+    width: 70%;
+    min-width: 300px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(228, 228, 188);
+    /* padding: 20px; */
+    border-radius: 0 25px 25px 0;
+    margin: 50px auto;
+}
+
+.ViewSelector__element {
+    color: rgb(140, 198, 63);
+    padding: 20px;
+    cursor: pointer;
+}
+
+.ViewSelector__element:hover {
+    color: rgb(0, 122, 6)
+}
+
+.active {
+    color: rgb(0, 63, 91)
+}
+
+.ViewSelector__types {
+    border-color: rgb(0, 63, 91);
+    border-style: solid;
+    border-width: 0 5px 0 5px;
+}
+
+.ViewSelector__add {
+    height: 100%;
+    padding: 20px 40px;
+    margin-left: auto
+}
+
+.active__add {
+    color: rgb(228, 228, 188);
+    background-color: rgb(0, 43, 71);
+    border-radius: 20px;
+}
