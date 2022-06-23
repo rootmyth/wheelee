@@ -1,0 +1,34 @@
+.AddRepairForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    background: rgb(228, 228, 188);
+    margin: 0 auto;
+}
+
+.AddRepairForm__field {
+    margin: 10px;
+}
+
+.AddRepairForm__field__text {
+    width: 375px;
+}
+
+.AddRepairForm__submit__btn {
+    background: rgb(140, 198, 63);
+    padding: 15px;
+    border: 5px solid rgb(228, 228, 188);
+    cursor: pointer;
+}
+
+.AddRepairForm__submit__btn:hover {
+    border: 5px solid rgb(0, 122, 6);
+}
+
+.AddRepairForm__submit__btn__text {
+    font-size: 20px;
+    font-weight: 700;
+}
