@@ -20,7 +20,16 @@ const AddRepairForm = (props) => {
         return number
     }
 
-    useEffect(() => {fetch(`http://localhost:8088/users/${localUser}`).then(res => res.json()).then((user) => {setCurrentUserObj(user)})}, [])
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/users/${localUser}`)
+            .then(res => res.json())
+            .then((user) => {
+                setCurrentUserObj(user)
+            })
+        },
+        []
+    )
 
     useEffect(
         () => {
@@ -45,7 +54,7 @@ const AddRepairForm = (props) => {
             dateSubmitted: new Date().getTime()
         }
         const newRepairRequest = {
-            user: localUser,
+            userId: localUser,
             pedicabId: repairRequest.pedicab,
             mechanicId: null,
             description: repairRequest.text,
