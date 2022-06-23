@@ -27,11 +27,19 @@ const Repair = () => {
         setPedicabs(cabs)
     }
 
-    const sendUpdatedRepairIdUpstream = (repairId) => {
+    const sendisCompleteRepairIdUpstream = (repairId) => {
         const repairArray = [...repairs]
         const targetRepair = repairArray.find(repair => repair.id === repairId)
         const repairIndex = repairArray.indexOf(targetRepair)
         repairArray[repairIndex].isComplete = true
+        setRepairs(repairArray)
+    }
+
+    const sendDeletedRepairIdUpstream = (repairId) => {
+        const repairArray = [...repairs]
+        const targetRepair = repairArray.find(repair => repair.id === repairId)
+        const repairIndex = repairArray.indexOf(targetRepair)
+        delete repairArray[repairIndex]
         setRepairs(repairArray)
     }
 
@@ -74,7 +82,8 @@ const Repair = () => {
                             cabs={pedicabs} 
                             repairs={repairs} 
                             availableCabChange={sendToggledAvailability} 
-                            repairListChange={sendUpdatedRepairIdUpstream}
+                            repairListChange={sendisCompleteRepairIdUpstream}
+                            repairListDelete={sendDeletedRepairIdUpstream}
                         />
                     : 
                         null
