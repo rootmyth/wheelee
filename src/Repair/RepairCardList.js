@@ -37,6 +37,7 @@ const RepairCardList = (props) => {
     }
 
     const removeRepair = (repairId) => {
+        props.deleteRepair(repairId)
         return fetch(`http://localhost:8088/repairRequests/${repairId}`, { method: "DELETE"})
     }
 
