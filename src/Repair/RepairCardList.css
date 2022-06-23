@@ -1,0 +1,85 @@
+.RepairCardList {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.RepairCardList__row {
+    margin: 10px;
+}
+
+.repairRow__element {
+    margin: auto 0;
+}
+
+.RepairCardList__row__one {
+    display: flex;
+    flex-direction: row;
+}
+
+.RepairCardList__row__one__description {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px;
+    border: 5px solid rgb(0, 43, 71);
+    border-radius: 0 20px 0 0;
+}
+
+.RepairCardList__row__two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-width: 0 5px 5px 5px;
+    border-style: solid;
+    border-color: rgb(140, 198, 63);
+    border-radius: 0 0 0 20px;
+    line-height: 0;
+}
+
+.repairProfileImg {
+    height: 50px;
+    padding: 3px;
+    border-radius: 0 0 0 15px;
+}
+
+.RepairCardList__row__two__info {
+    height: 100%;
+    padding: 0 5px 0px 10px;
+    line-height: 2;
+}
+
+.RepairCardList__row__two__type {
+    height: 100%;
+    font-weight: 700;
+    padding: 0 5px 0px 5px;
+    line-height: 2;
+}
+
+.buttonContainer {
+    display: flex;
+}
+
+.RepairCardList__row__two__complete {
+    justify-self: flex-end;
+}
+
+.RepairCardList__row__two__remove {
+    justify-self: flex-end;
+}
+
+.repairRow__btn {
+    opacity: 0.5;
+    height: 50px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.repairRow__btn:hover {
+    opacity: 1;
+}
+
+.repairBtn__complete {
+    border-radius: 0 0 0 15px;
+}
