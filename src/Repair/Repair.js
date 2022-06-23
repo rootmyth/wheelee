@@ -16,6 +16,10 @@ const Repair = () => {
         
     }
 
+    const toggleAddValue = () => {
+        setAddView(!addView)
+    }
+
     const sendToggledAvailability = (toggleValue, cabNumber) => {
         const cabs = [...pedicabs]
         cabs[cabNumber - 1].isAvailable = toggleValue
@@ -55,7 +59,7 @@ const Repair = () => {
     return (
         <article className="Repair">
             <section className="Repair__viewSelector">
-                <ViewSelector viewSelection={sendViewNumberUpstream}/>
+                <ViewSelector viewSelection={sendViewNumberUpstream} toggleAdd={toggleAddValue}/>
                 {addView ? <h1>Add Repair</h1> : null}
             </section>
             <section className="Repair__viewRender">
