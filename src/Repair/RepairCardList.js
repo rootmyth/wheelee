@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import "./RepairCardList.css"
 import defaultImg from "../images/profile-07.svg"
 import completeImg from "../images/complete-19.svg"
 import removeImg from "../images/remove-20.svg"
 
 const RepairCardList = (props) => {
+
+    const noRepairItems = "No repair requests to show, nice!"
 
     const filterRepairs = (repairs) => {
         const cabRepairFilter = (repair) => {
@@ -17,19 +19,6 @@ const RepairCardList = (props) => {
         return thisCabCardsRepairs.sort(repairOrder)    
     }
     const filteredRepairs = filterRepairs(props.repairs)
-
-    // const [repairList, setRepairList] = useState([])
-
-    const noRepairItems = "No repair requests to show, nice!"
-
-    
-
-    // useEffect(
-    //     () => {
-    //         setRepairList(thisCabCardsRepairs)
-    //     },
-    //     []
-    // )
 
     const completeRepair = (repairId) => {
 
