@@ -68,7 +68,7 @@ const CabView = (props) => {
                             }
                         </div>
                         <div className="CabView__card__repairList">
-                            <RepairCardList cabNumber={cab.id} repairs={props.repairs} repairListChange={props.repairListChange}/>
+                            <RepairCardList cabNumber={cab.id} repairs={props.repairs} repairListChange={props.repairListChange} deleteRepair={props.repairListDelete}/>
                         </div>
                     </div>
                 )
