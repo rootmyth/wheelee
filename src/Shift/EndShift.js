@@ -33,14 +33,6 @@ const EndShift = (props) => {
                 isComplete: false,
                 dateSubmitted: new Date().getTime()
             }
-
-            // repairRequest.inputField = repairRequest.field
-            // delete repairRequest.input
-            // repairRequest.userId = currentUser
-            // repairRequest.pedicabId = parseInt(localStorage.getItem("activeCabNum"))
-            // repairRequest.mechanicId = null
-            // repairRequest.isComplete = false
-            // delete repairRequest.field
             
             const repairFetchOptions = {
                 method: "POST",
