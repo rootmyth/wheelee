@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import "./ShiftForm.css"
 import dateGenerator from "./ShiftDateObjectGenerator"
 
-const ShiftForm = () => {
+const ShiftForm = (props) => {
 
     const [pedicabs, setPedicabs] = useState([])
     const [newShift, setNewShift] = useState ({
@@ -33,7 +33,7 @@ const ShiftForm = () => {
         []
     )
 
-    const startShift = (e) => {
+    const startShift = () => {
         
         const newShiftToPost = {
             userId: parseInt(localStorage.getItem("wheelee_user")),
@@ -60,6 +60,7 @@ const ShiftForm = () => {
         }
 
         localStorage.setItem("activeCabNum", newShift.pedicabId)
+        props.userStatus(true)
         const startShiftFetch = fetch("http://localhost:8088/driverShifts", shiftFetchOptions)
         const markActiveFetch = fetch(`http://localhost:8088/users/${parseInt(localStorage.getItem("wheelee_user"))}`, activeFetchOptions)
 
