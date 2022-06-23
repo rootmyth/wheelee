@@ -9,9 +9,9 @@ const ShiftViews = (props) => {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Shift/>}/>
+                <Route path="/" element={<Shift userStatus={props.userStatus}/>}/>
                 <Route path="/activeShift" element={<ActiveShift/>}/>
-                <Route path="/endShift" element={<EndShift/>}/>
+                <Route path="/endShift" element={<EndShift userStatus={props.userStatus}/>}/>
             </Routes>
         </>
     )
