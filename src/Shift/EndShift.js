@@ -5,7 +5,7 @@ import "./EndShift.css"
 import addFieldImg from "../images/addField-14.svg"
 import removeFieldImg from "../images/delete-15.svg"
 
-const EndShift = () => {
+const EndShift = (props) => {
 
     const [requestFieldNum, setRequestFieldNum] = useState(1)
     const [repairData, setRepairData] = useState([])
@@ -60,6 +60,7 @@ const EndShift = () => {
             body: JSON.stringify({isActive : false})
         }
 
+        props.userStatus(false)
         localStorage.removeItem("activeCabNum")
 
         const markInactiveFetch = fetch(`http://localhost:8088/users/${currentUser}`, inactiveFetchOptions)
