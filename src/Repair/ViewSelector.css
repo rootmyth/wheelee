@@ -25,11 +25,11 @@
 }
 
 .ViewSelector__element:hover {
-    color: rgb(0, 122, 6)
+    color: rgb(0, 122, 6);
 }
 
 .active {
-    color: rgb(0, 63, 91)
+    color: rgb(0, 63, 91);
 }
 
 /* .ViewSelector__types {
