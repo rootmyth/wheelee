@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import ViewSelector from "./ViewSelector"
+import AddRepairForm from "./AddRepairForm"
 import CabView from "./CabView"
 import TypeView from "./TypeView"
 import CompleteView from "./CompleteView"
@@ -34,6 +35,11 @@ const Repair = () => {
         setRepairs(repairArray)
     }
 
+    const addNewRepair = (repairObj) => {
+        const repairArray = [...repairs, repairObj]
+        setRepairs(repairArray)
+    }
+
     useEffect(
         () => {
             fetch("http://localhost:8088/pedicabs")
@@ -60,7 +66,7 @@ const Repair = () => {
         <article className="Repair">
             <section className="Repair__viewSelector">
                 <ViewSelector viewSelection={sendViewNumberUpstream} toggleAdd={toggleAddValue}/>
-                {addView ? <h1>Add Repair</h1> : null}
+                {addView ? <AddRepairForm addNewRepair={addNewRepair} cabs={pedicabs}/> : null}
             </section>
             <section className="Repair__viewRender">
                     {repairView === 1 ? 
