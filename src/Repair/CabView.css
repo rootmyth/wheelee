@@ -1,0 +1,55 @@
+.CabView__card {
+    height: 100%;
+    width: 70%;
+    min-width: 300px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-rows: 200px auto;
+    grid-template-columns: 200px auto;
+    background: rgb(228, 228, 188);
+    padding: 20px;
+    margin: 30px auto;
+}
+
+.CabView__card__number {
+    height: 100%;
+    font-size: 100px;
+    font-weight: 700;
+    background-image: url("../images/cabNumBG-16.svg");
+    text-align: center;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.CabView__card__number-unavailable {
+    height: 100%;
+    font-size: 100px;
+    font-weight: 700;
+    background-image: url("../images/cabNumBG-unavailable-18.svg");
+    text-align: center;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.CabView__card__number__text {
+    height: 100%;
+    background-color:rgb(228, 228, 188, 0.8);
+    padding-top: 40px;
+}
+
+.CabView__card__availabilityBtn {
+    grid-area: 2 / 1 / 2 / 1;
+    justify-self: center;
+}
+
+.availableBtn {
+    color: rgb(228, 228, 188);
+    background: rgb(118, 0, 0)
+}
+
+.availableBtn:hover {
+    border-color: rgb(59, 0, 0)
+}
+
+.CabView__card__repairList {
+    grid-column: 2 / 2;
+    grid-row: 1 / span 2;
+}
