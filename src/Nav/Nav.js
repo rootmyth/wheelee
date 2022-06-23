@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import React from "react"
 import "./Nav.css"
 import WheeleeHome from "./WheeleeHome"
 import NavIcon from "./NavIcon"
@@ -9,23 +8,9 @@ import shift from "../images/shift-06.svg"
 import contact from "../images/contact-05.svg"
 import profile from "../images/profile-07.svg"
 import logout from "../images/logout-08.svg"
+import activeShift from "../images/activeShift-17.svg"
 
-const Nav = () => {
-
-    const [currentUser, setCurrentUser] = useState({})
-
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/users/${parseInt(localStorage.getItem("wheelee_user"))}`)
-            .then(res => res.json())
-            .then((userArray => {
-                setCurrentUser(userArray)
-            }))
-        },
-        []
-    )
-
-    const active = currentUser.isActive
+const Nav = (props) => {
 
     return (
         <nav className="Nav">
@@ -33,9 +18,9 @@ const Nav = () => {
                 <WheeleeHome />
             </div>
             <div className="Nav__icons">
-                <NavIcon img={info} link="information" altName="Manager Information" />
-                <NavIcon img={repair} link="repair" altName="Repair List" />
-                {active ? <NavIcon img={shift} link="activeShift" altName="Shifts" /> : <NavIcon img={shift} link="shift" altName="Shifts" />}
+                { props.user.isManager ? <NavIcon img={info} link="information" altName="Manager Information" /> : null }
+                { props.user.isMechanic ? <NavIcon img={repair} link="repair" altName="Repair List" /> : null }
+                { props.user.isActive ? <NavIcon img={activeShift} link="activeShift" altName="Shifts" /> : <NavIcon img={shift} link="" altName="Shifts" /> }
                 <NavIcon img={contact} link="contact" altName="Contacts" />
                 <NavIcon img={profile} link="profile" altName="My Profile" />
                 <NavIcon img={logout} link="login" altName="Log Out" /> 
