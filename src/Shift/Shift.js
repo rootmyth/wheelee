@@ -5,7 +5,7 @@ import ShiftTable from "./ShiftTable"
 import ShiftForm from "./ShiftForm"
 import ShiftHistory from "./ShiftHistory"
 
-const Shift = () => {
+const Shift = (props) => {
     return (
         <section className="Shift">
             <article className="Shift__date">
@@ -16,7 +16,7 @@ const Shift = () => {
                     <ShiftTable/>
                 </div>
                 <div className="Shift__new__formAndHistory">
-                    <ShiftForm/>
+                    <ShiftForm userStatus={props.userStatus}/>
                     <ShiftHistory/>
                 </div>
             </article>
