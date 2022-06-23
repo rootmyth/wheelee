@@ -22,6 +22,14 @@ const Repair = () => {
         setPedicabs(cabs)
     }
 
+    const sendUpdatedRepairIdUpstream = (repairId) => {
+        const repairArray = [...repairs]
+        const targetRepair = repairArray.find(repair => repair.id === repairId)
+        const repairIndex = repairArray.indexOf(targetRepair)
+        repairArray[repairIndex].isComplete = true
+        setRepairs(repairArray)
+    }
+
     useEffect(
         () => {
             fetch("http://localhost:8088/pedicabs")
@@ -44,14 +52,6 @@ const Repair = () => {
         []
     )
 
-    const sendUpdatedRepairArrayUpstream = (repairId) => {
-        const repairArray = [...repairs]
-        const targetRepair = repairArray.find(repair => repair.id === repairId)
-        const repairIndex = repairArray.indexOf(targetRepair)
-        repairArray[repairIndex].isComplete = true
-        setRepairs(repairArray)
-    }
-
     return (
         <article className="Repair">
             <section className="Repair__viewSelector">
@@ -64,7 +64,7 @@ const Repair = () => {
                             cabs={pedicabs} 
                             repairs={repairs} 
                             availableCabChange={sendToggledAvailability} 
-                            repairListChange={sendUpdatedRepairArrayUpstream}
+                            repairListChange={sendUpdatedRepairIdUpstream}
                         />
                     : 
                         null
