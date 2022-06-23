@@ -1,0 +1,102 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Contact__card {
+    width: auto;
+    max-width: 1000px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgb(228, 228, 188);
+    margin: 10px;
+    border-radius: 0 0 0 110px;
+}
+
+.Contact__card__image {
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgb(228, 228, 188);
+    border-radius: 0 0 0 100px;
+}
+
+.Contact__card__image__URL {
+    width: 300px;
+    height: 300px;
+    border-radius: 0 0 0 90px;
+    opacity: 0.5;
+}
+
+.Contact__card__image__URL--active {
+    width: 300px;
+    height: 300px;
+    border-radius: 0 0 0 90px;
+}
+
+.Contact__card__info {
+    height: 300px;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex: auto auto auto;
+    padding: 10px 20px 10px 10px;
+}
+
+.Contact__card__info__name {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: -8px;
+    z-index: 1;
+}
+
+.Contact__card__info__name__status {
+    display: inline;
+    font-size: 20px;
+    padding: 10px;
+    float: right;
+}
+
+.Contact__card__info__name__status--active {
+    display: inline;
+    float: right;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(140, 198, 63);
+    animation: 1s infinite alternate activeUser;
+}
+
+@keyframes activeUser {
+    from {
+        background-color: rgb(140, 198, 63);
+    }
+
+    to {
+        background-color: rgb(228, 228, 188);
+    }
+}
+
+.Contact__card__info__title {
+    width: 100%;
+    height: 20px;
+    background: rgb(140, 198, 63);
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+.Contact__card__info__methods {
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+}
+
+.Contact__card__info__methods__phone {
+    font-size: 40px;
+}
