@@ -1,16 +1,21 @@
+.ViewContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .ViewSelector {
     height: 100%;
-    width: 70%;
+    width: auto;
     min-width: 300px;
-    max-width: 900px;
+    max-width: 700px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background: rgb(228, 228, 188);
     /* padding: 20px; */
-    border-radius: 0 25px 25px 0;
-    margin: 50px auto;
+    margin: 50px 50px 50px auto;
 }
 
 .ViewSelector__element {
@@ -27,20 +32,21 @@
     color: rgb(0, 63, 91)
 }
 
-.ViewSelector__types {
+/* .ViewSelector__types {
     border-color: rgb(0, 63, 91);
     border-style: solid;
     border-width: 0 5px 0 5px;
-}
+} */
 
 .ViewSelector__add {
     height: 100%;
-    padding: 20px 40px;
-    margin-left: auto
+    justify-self: center;
+    padding: 20px;
+    margin: 50px auto 50px 0;
 }
 
 .active__add {
-    color: rgb(228, 228, 188);
-    background-color: rgb(0, 43, 71);
+    background-color: rgb(228, 228, 188);
+    color: rgb(0, 43, 71);
     border-radius: 20px;
 }
