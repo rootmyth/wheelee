@@ -15,7 +15,7 @@ const AppViews = (props) => {
                 { props.user.isManager ? <Route path="/information" element={<Information/>}/> : null }
                 { props.user.isMechanic ? <Route path="/repair/*" element={<Repair/>}/> : null }
                 <Route exact path="*" element={<ShiftViews userStatus={props.userStatusData}/>}/>
-                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/contact" element={<Contact localUser={props.user}/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/login" element={<Login/>}/>
             </Routes>
