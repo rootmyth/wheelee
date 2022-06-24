@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react"
 import "./Contact.css"
+import removeUser from "../images/remove-20.svg"
 
-const Contact = () => {
-
-    const [users, setUsers] = useState([])
+const Contact = (props) => {
 
     const localUserId = parseInt(localStorage.getItem("wheelee_user"))
-    const localUserObj = users.find(user => user.id === localUserId)
 
-
+    const [users, setUsers] = useState([])
+    
     const sortUsers = (userArray) => {
         const sortActiveUsersToTop = (user) => {
             if (user.isActive) {
@@ -33,15 +32,38 @@ const Contact = () => {
         []
     )
 
+    const removeEmployee = (userId) => {
+        const userArrayCopy = [...users]
+        const employeeObjToRemove = userArrayCopy.find(user => user.id === userId)
+        const employeeObjIndex = userArrayCopy.indexOf(employeeObjToRemove)
+        delete userArrayCopy[employeeObjIndex]
+        setUsers(userArrayCopy)
+        return fetch(`http://localhost:8088/users/${userId}`, { method : "DELETE"})
+    }
+
     return (
         <article className="Contact">
             {sortedUsers.map(user => {
                 if (user.id !== localUserId) {
                     return (
                         <section key={`contact--${user.id}`} className="Contact__card">
-                            <div className="Contact__card__image">
+                            <div className={`Contact__card__image${user.isActive ? "--active" : ""}`}>
                                 <img
-                                    className={user.isActive ? "Contact__card__image__URL--active" : "Contact__card__image__URL"} src={user.imageURL} alt={`${user.name}'s face`} title={`${user.name}'s face`}/>
+                                    className={user.isActive ? "Contact__card__image__URL--active" : "Contact__card__image__URL"}
+                                    src={user.imageURL}
+                                    alt={`${user.name}'s face`}
+                                    title={`${user.name}'s face`}
+                                />
+                                {props.localUser.isManager ?
+                                    <img
+                                        className="Contact__card__image__remove"
+                                        src={removeUser}
+                                        alt={`Delete ${user.name}`}
+                                        onClick={() => {
+                                            removeEmployee(user.id)
+                                        }}
+                                    />
+                                : null}
                             </div>
                             <div className="Contact__card__info">
                                 <div className="Contact__card__info__name">
@@ -62,6 +84,7 @@ const Contact = () => {
                                     <div className="Contact__card__info__methods__email">
                                         {user.email}
                                     </div>
+
                                 </div>
                             </div>
                         </section>

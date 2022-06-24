@@ -13,7 +13,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     background: rgb(228, 228, 188);
-    margin: 10px;
+    margin: 0 30px 20px 30px;
     border-radius: 0 0 0 110px;
 }
 
@@ -22,6 +22,15 @@
     height: 300px;
     border: 10px solid rgb(228, 228, 188);
     border-radius: 0 0 0 100px;
+    margin: 0 auto;
+}
+
+.Contact__card__image--active {
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgb(140, 198, 63);
+    border-radius: 0 0 0 100px;
+    margin: 0 auto;
 }
 
 .Contact__card__image__URL {
@@ -37,14 +46,28 @@
     border-radius: 0 0 0 90px;
 }
 
+.Contact__card__image__remove {
+    height: 60px;
+    position: relative; 
+    top: -289px;
+    right: -230px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.Contact__card__image__remove:hover {
+    opacity: 1;
+
+}
+
 .Contact__card__info {
     height: 300px;
     min-width: 300px;
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    flex: auto auto auto;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 0 auto;
 }
 
 .Contact__card__info__name {
