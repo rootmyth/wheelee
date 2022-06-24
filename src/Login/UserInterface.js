@@ -25,10 +25,15 @@ const UserInterface = () => {
         setCurrentUser(setStatus)
     }
 
+    const setNewProfileInfo = (userObj) => {
+        setCurrentUser(userObj)
+
+    }
+
     return (
         <>
             <Nav user={currentUser}/>
-            <AppViews user={currentUser} userStatusData={sendUserStatusUpstream}/>
+            <AppViews user={currentUser} userStatusData={sendUserStatusUpstream} setProfileInfo={setNewProfileInfo}/>
         </>
     )
 }
