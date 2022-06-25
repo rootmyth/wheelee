@@ -1,7 +1,7 @@
 .CabView__card {
     height: 100%;
     width: 70%;
-    min-width: 300px;
+    min-width: 410px;
     max-width: 1000px;
     display: grid;
     grid-template-rows: 200px auto;
