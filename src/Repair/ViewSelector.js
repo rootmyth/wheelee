@@ -42,7 +42,7 @@ const ViewSelector = (props) => {
                     </div>
                 </div>
                 <div
-                    className={addState ? "ViewSelector__add ViewSelector__element active__add" : "ViewSelector__add ViewSelector__element"}
+                    className={addState ? "ViewSelector__add ViewSelector__element__add active__add" : "ViewSelector__add ViewSelector__element__add"}
                     onClick={
                         () => {
                             setAddState(!addState)
