@@ -1,20 +1,148 @@
 .Profile {
     width: 60%;
+    min-width: 300px;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgb(228, 228, 188);
+    padding: 20px;
     margin: 50px auto;
+}
+
+.Profile__element {
+    margin: 10px 0;
+}
+
+.Profile__image {
+    line-height: 0;
+}
+
+.Profile__image__img {
+    height: 300px;
+    width: 300px;
+    border: 5px solid rgb(140, 198, 63);
+}
+
+.Profile__imageURL {
+    width: 270px;
+    background-color: rgb(140, 198, 63);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.imageURL--inactive {
+    height: 52px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.Profile__imageURL__field {
+    width: 250px;
+    margin: 0 auto;
+}
+
+.Profile__name {
+    font-size: 75px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.name--inactive {
+    padding: 10.5px 0;
+}
+
+.Profile__name__field {
+    display: block;
+    width: 80%;
+    min-width: 289.5px;
+    font-size: 75px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Profile__bio {
+    width: 80%;
+    min-width: 290px;
+    max-width: 660px;
+    background-color:rgb(140, 198, 63);
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 0 0 20px 20px;
+    margin: 0 30px;
+}
+
+.Profile__bio--active {
+    width: 80%;
+    min-width: 290px;
+    max-width: 660px;
+    background-color:rgb(140, 198, 63);
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    margin: 0 30px;
+}
+
+.Profile__bio__field {
+    display: block;
+    width: 90%;
+    height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;;
+    margin: 0 auto;
+}
+
+.Profile__contact {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Profile__contact__phone {
+    font-size: 40px;
+}
+
+.phone--inactive {
+    padding: 10.5px 0;
+}
+
+.Profile__contact__phone__field {
+    display: block;
+    width: 50%;
+    min-width: 290px;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Profile__contact__email {
+    font-size: 20px;
+}
+
+.email--inactive {
+    padding: 10.5px 0;
+}
+
+.Profile__contact__email__field {
+    display: block;
+    width: 50%;
+    min-width: 290px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .Profile__editBtn__toggle {
     width: 120px;
-    float: right;
     color: rgb(140, 198, 63);
     font-size: 20px;
     font-weight: 700;
     text-align: center;
     padding: 20px;
     border: 5px solid rgb(140, 198, 63);
+    border-radius: 0 0 0 20px;
     margin: 10px;
     cursor: pointer;
 }
@@ -26,7 +154,6 @@
 
 .Profile__editBtn__toggle--active {
     width: 120px;
-    float: right;
     background-color: rgb(0, 63, 91);
     color: rgb(228, 228, 188);
     font-size: 20px;
@@ -34,6 +161,7 @@
     text-align: center;
     padding: 20px;
     border: 5px solid rgb(0, 63, 91);
+    border-radius: 0 0 0 20px;
     margin: 10px;
     cursor: pointer;
 }
@@ -41,3 +169,4 @@
 .Profile__editBtn__toggle--active:hover {
     color: rgb(140, 198, 63);
 }
+
