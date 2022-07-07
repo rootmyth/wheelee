@@ -23,7 +23,7 @@ const Nav = (props) => {
                 { props.user.isActive ? <NavIcon img={activeShift} link="activeShift" altName="Shifts" /> : <NavIcon img={shift} link="" altName="Shifts" /> }
                 <NavIcon img={contact} link="contact" altName="Contacts" />
                 <NavIcon img={profile} link="profile" altName="My Profile" />
-                <NavIcon img={logout} link="login" altName="Log Out" /> 
+                <NavIcon img={logout} action="logout" link="" altName="Log Out" /> 
             </div>
         </nav>
     )
