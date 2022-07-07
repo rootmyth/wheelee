@@ -7,11 +7,45 @@ import aboutLogo from "../images/bwLogo-05.svg"
 const Login = () => {
 
     const [users, setUsers] = useState([])
+    const [credentialMatch, setCredentialMatch] = useState(false)
+    const [userMatch, setUserMatch] = useState({})
     const [credentials, setCredentials] = useState ({
         email: "",
         password: ""
     })
     let authError = ""
+
+    const checkCredentials = (email, password) => {
+        const foundUser = users.find(user => user.email === email && user.password === password)
+        if (foundUser) {
+            
+            return true
+        } else {
+            
+            return false
+        }
+    }
+
+    const getUser = (email, password) => {
+        const foundUser = users.find(user => user.email === email && user.password === password)
+        if (foundUser) {
+
+            return foundUser
+        } else {
+            return undefined
+        }
+    }
+
+    const handleChange = (e) => {
+        if (e.target.name === "email") {
+            checkCredentials(e.target.value, credentials.password)
+            getUser(e.target.value, credentials.password)
+        }
+        if (e.target.name === "password") {
+            checkCredentials(credentials.email, e.target.value)
+            getUser(credentials.email, e.target.value)
+        }
+    }
 
     useEffect(
         () => {
@@ -24,15 +58,13 @@ const Login = () => {
         []
     )
 
-    const submitCredentials = () => {
-        
-        const foundUser = users.find(user => user.email === credentials.email && user.password === credentials.password)
-        if (foundUser) {
-            localStorage.setItem("wheelee_user", foundUser.id)
-        } else {
-            authError = "Sorry, but it doesn't look like this user exists."
-        }
-    }
+    useEffect(
+        () => {
+            setCredentialMatch(checkCredentials(credentials.email, credentials.password))
+            setUserMatch(getUser(credentials.email, credentials.password))
+        },
+        [checkCredentials, setUserMatch]
+    )
 
     return (
         <>
@@ -52,6 +84,7 @@ const Login = () => {
                                     const copy = {...credentials}
                                     copy.email = e.target.value
                                     setCredentials(copy)
+                                    handleChange(e)
                                 }
                             }
                             className="Login__form__fieldset__input"
@@ -68,6 +101,7 @@ const Login = () => {
                                     const copy = {...credentials}
                                     copy.password = e.target.value
                                     setCredentials(copy)
+                                    handleChange(e)
                                 }
                             }
                             className="Login__form__fieldset__input"
@@ -77,7 +111,14 @@ const Login = () => {
                         />
                     </fieldset>
                 </form>
-                <button className="Login__button" onClick={() => submitCredentials}><h1>Log In</h1></button>
+                <Link to={credentialMatch ? "/userInterface" : "/login"}>
+                    <button
+                        className="Login__button"
+                        onClick={() => credentialMatch ?  localStorage.setItem("wheelee_user", parseInt(userMatch.id)): undefined}
+                    >
+                        <h1>Log In</h1>
+                    </button>
+                </Link>
                 <section className="Login__register">
                     <Link to="/register">Or create a new account</Link>
                 </section>
