@@ -7,7 +7,6 @@ const Profile = (props) => {
 
     const [editView, setEditView] = useState(false)
     const [newProfileValue, setNewProfileValue] = useState(currentUser)
-    const [currentProfileValues, setCurrentProfileValues] = useState(currentUser)
 
     return (
         <article className="Profile">
@@ -17,18 +16,18 @@ const Profile = (props) => {
             <section className={`Profile__imageURL ${editView ? "" : "imageURL--inactive"}`}>
                 {editView ?
                     <input
-                    className="Profile__imageURL__field"
-                    name="profileImageURL"
-                    type="text"
-                    value={`${newProfileValue.imageURL}`}
-                    onChange={
-                        (e) => {
-                            const copy = {...newProfileValue}
-                            copy.imageURL = e.target.value
-                            setNewProfileValue(copy)
+                        className="Profile__imageURL__field"
+                        name="profileImageURL"
+                        type="text"
+                        value={`${newProfileValue.imageURL}`}
+                        onChange={
+                            (e) => {
+                                const copy = {...newProfileValue}
+                                copy.imageURL = e.target.value
+                                setNewProfileValue(copy)
+                            }
                         }
-                    }
-                />
+                    />
                 :
                     "Hello, I'm..."
                 }
@@ -36,18 +35,18 @@ const Profile = (props) => {
             <section className={`Profile__name Profile__element ${editView ? "" : "name--inactive"}`}>
                 {editView ?
                         <input
-                        className="Profile__name__field"
-                        name="profileName"
-                        type="text"
-                        value={`${newProfileValue.name}`}
-                        onChange={
-                            (e) => {
-                                const copy = {...newProfileValue}
-                                copy.name = e.target.value
-                                setNewProfileValue(copy)
+                            className="Profile__name__field"
+                            name="profileName"
+                            type="text"
+                            value={`${newProfileValue.name}`}
+                            onChange={
+                                (e) => {
+                                    const copy = {...newProfileValue}
+                                    copy.name = e.target.value
+                                    setNewProfileValue(copy)
+                                }
                             }
-                        }
-                    />
+                        />
                     :
                         currentUser.name
                     }
@@ -55,18 +54,18 @@ const Profile = (props) => {
             <section className={`Profile__bio${editView ? "--active" : ""} Profile__element`}>
             {editView ?
                     <input
-                    className="Profile__bio__field"
-                    name="profileBio"
-                    maxLength="60"
-                    value={`${newProfileValue.bio}`}
-                    onChange={
-                        (e) => {
-                            const copy = {...newProfileValue}
-                            copy.bio = e.target.value
-                            setNewProfileValue(copy)
+                        className="Profile__bio__field"
+                        name="profileBio"
+                        maxLength="60"
+                        value={`${newProfileValue.bio}`}
+                        onChange={
+                            (e) => {
+                                const copy = {...newProfileValue}
+                                copy.bio = e.target.value
+                                setNewProfileValue(copy)
+                            }
                         }
-                    }
-                />
+                    />
                 :
                     currentUser.bio
                 }
@@ -75,18 +74,18 @@ const Profile = (props) => {
                 <div className={`Profile__contact__phone Profile__element ${editView ? "" : "phone--inactive"}`}>
                 {editView ?
                     <input
-                    className="Profile__contact__phone__field"
-                    name="profilePhone"
-                    maxLength="15"
-                    value={`${newProfileValue.phoneNumber}`}
-                    onChange={
-                        (e) => {
-                            const copy = {...newProfileValue}
-                            copy.phoneNumber = e.target.value
-                            setNewProfileValue(copy)
+                        className="Profile__contact__phone__field"
+                        name="profilePhone"
+                        maxLength="15"
+                        value={`${newProfileValue.phoneNumber}`}
+                        onChange={
+                            (e) => {
+                                const copy = {...newProfileValue}
+                                copy.phoneNumber = e.target.value
+                                setNewProfileValue(copy)
+                            }
                         }
-                    }
-                />
+                    />
                 :
                     currentUser.phoneNumber
                 }
@@ -94,18 +93,17 @@ const Profile = (props) => {
                 <div className={`Profile__contact__email Profile__element ${editView ? "" : "email--inactive"}`}>
                 {editView ?
                     <input
-                    className="Profile__contact__email__field"
-                    name="profileBio"
-                    maxLength="60"
-                    value={`${newProfileValue.email}`}
-                    onChange={
-                        (e) => {
-                            const copy = {...newProfileValue}
-                            copy.email = e.target.value
-                            setNewProfileValue(copy)
+                        className="Profile__contact__email__field"
+                        name="profileEmail"
+                        value={`${newProfileValue.email}`}
+                        onChange={
+                            (e) => {
+                                const copy = {...newProfileValue}
+                                copy.email = e.target.value
+                                setNewProfileValue(copy)
+                            }
                         }
-                    }
-                />
+                    />
                 :
                     currentUser.email
                 }
@@ -116,8 +114,7 @@ const Profile = (props) => {
                     className={`Profile__editBtn__toggle${editView ? "--active" : ""}`}
                     onClick={
                         () => {
-                            setEditView(!editView)
-                            
+                            setEditView(!editView)   
                         }
                     }
                 >
