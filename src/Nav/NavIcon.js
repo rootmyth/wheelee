@@ -4,8 +4,14 @@ import "./NavIcon.css"
 
 const NavIcon = (props) => {
     return (
-        <Link to={`/${props.link}`}>
-            <img className="NavIcon" src={props.img} alt={props.altName} title={props.altName}/>
+        <Link to={props.link}>
+            <img
+                className="NavIcon"
+                src={props.img}
+                alt={props.altName}
+                title={props.altName}
+                onClick={props.action === "logout" ? () => localStorage.removeItem("wheelee_user") : null}
+            />
         </Link>
     )
 }
