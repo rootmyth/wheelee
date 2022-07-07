@@ -126,7 +126,7 @@ const EndShift = (props) => {
                     :""}
                 </div>
             </section>
-            <Link to="/">
+            <Link to="/userInterface">
                 <button className="EndShift__btn" onClick={submitRequests}>
                     <h1>Submit Request&#40;s&#41;</h1>
                 </button>

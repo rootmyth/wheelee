@@ -134,7 +134,7 @@ const ShiftForm = (props) => {
                     <h1>Let's Roll!</h1>
                 </button>
             :
-                <Link to="/activeShift">
+                <Link to="/userInterface/activeShift">
                     <button className="ShiftForm__startShiftBtn" onClick={startShift}>
                         <h1>Let's Roll!</h1>
                     </button>
