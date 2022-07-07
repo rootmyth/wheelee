@@ -33,7 +33,7 @@ const ActiveShift = () => {
                 </blockquote>
                 <h3 className="ActiveShift__tip__author">-{randomTip.user.name}</h3>
             </section>
-            <Link to="/endShift">
+            <Link to="/userInterface/endShift">
                 <button className="ActiveShift__btn">
                     <h1>End Shift</h1>
                 </button>
