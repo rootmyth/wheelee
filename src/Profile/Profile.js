@@ -8,6 +8,42 @@ const Profile = (props) => {
     const [editView, setEditView] = useState(false)
     const [newProfileValue, setNewProfileValue] = useState(currentUser)
 
+    const postProfileDataAndUpdateState = () => {
+        const dataToSend = {
+            email: newProfileValue.email,
+            name: newProfileValue.name,
+            imageURL: newProfileValue.imageURL,
+            phoneNumber: newProfileValue.phoneNumber,
+            bio: newProfileValue.bio,
+        }
+        const fetchOptions = {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dataToSend)
+        }
+        const updateProfileData = fetch(`http://localhost:8088/users/${parseInt(currentUser.id)}`, fetchOptions)
+        const newProfileInfo = {
+            id: newProfileValue.id,
+            email: newProfileValue.email,
+            password: newProfileValue.password,
+            name: newProfileValue.name,
+            imageURL: newProfileValue.imageURL,
+            phoneNumber: newProfileValue.phoneNumber,
+            bio: newProfileValue.bio,
+            isMechanic: newProfileValue.isMechanic,
+            isManager: newProfileValue.isManager,
+            isActive: newProfileValue.isActive
+        }
+        if (editView) {
+            props.setProfileInfo(newProfileInfo)
+            setEditView(!editView)
+            return updateProfileData
+        }
+        setEditView(!editView)
+    }
+
     return (
         <article className="Profile">
             <section className="Profile__image">
@@ -113,9 +149,7 @@ const Profile = (props) => {
                 <div
                     className={`Profile__editBtn__toggle${editView ? "--active" : ""}`}
                     onClick={
-                        () => {
-                            setEditView(!editView)   
-                        }
+                            postProfileDataAndUpdateState
                     }
                 >
                     {editView ? "Save Changes" : "Edit Profile"}
