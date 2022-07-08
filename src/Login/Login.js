@@ -111,7 +111,7 @@ const Login = () => {
                         />
                     </fieldset>
                 </form>
-                <Link to={credentialMatch ? "/userInterface" : "/login"}>
+                <Link to={credentialMatch ? "/userInterface" : "/"}>
                     <button
                         className="Login__button"
                         onClick={() => credentialMatch ?  localStorage.setItem("wheelee_user", parseInt(userMatch.id)): undefined}
