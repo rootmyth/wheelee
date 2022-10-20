@@ -258,8 +258,14 @@ Wheelee currently has the fundamental functionality of a CRUD application.  If y
 }
 ```
 
-2.  In git bash/terminal/etc. navigate to the folder with your JSON file and run this: json-server (filename.json) -p 8088 -w
+2.  In git bash/terminal/etc. navigate to the folder with your JSON file and run this: 
+```
+json-server (filename.json) -p 8088 -w
+```
 
-3. Then, in another window navigate to the src folder of the repo and run: npm start
+3. Then, in another window navigate to the src folder of the repo and run:
+```
+npm start
+```
 
 It should open your default browser with the wheelee log-in page.  All testing emails and passwords are above.  If you have any questions please contact me!
