@@ -2,7 +2,13 @@
 
 Wheelee currently has the fundamental functionality of a CRUD application.  If you'd like to test and poke around in the application feel free to fork the repo.
 
+## About the App
+
+Wheelee was born out of a desire to improve workplace processes at my current job, a pedicab company.  Currently, we use Slack for communication, Omnify for booking & scheduling, and good-ole dry-erase boards for pedicab repair and maintenance.  These have their drawbacks, and wheelee aims to replace all of them.  Wheelee isn't limited to a finite amount of space.  Keep track of as many repairs as you like.
+
 ![](wheelee-demo.gif)
+
+## How to Test
 
 1. You're going to want some kind of data to work with.  You can simply create a JSON file for testing.  You're welcome to use this:
 
