@@ -2,6 +2,8 @@
 
 Wheelee currently has the fundamental functionality of a CRUD application.  If you'd like to test and poke around in the application feel free to fork the repo.
 
+![](https://github.com/wheelee/wheelee-demo.gif)
+
 1. You're going to want some kind of data to work with.  You can simply create a JSON file for testing.  You're welcome to use this:
 
 ```
