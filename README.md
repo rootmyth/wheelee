@@ -267,6 +267,10 @@ json-server (filename.json) -p 8088 -w
 
 3. Then, in another window navigate to the src folder of the repo and run:
 ```
+npm install
+```
+Then...
+```
 npm start
 ```
 
